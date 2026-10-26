@@ -4,7 +4,7 @@ Les 40 skills que j'ai écrites pour travailler avec des agents IA au quotidien 
 livrer des sites, brancher des automatisations, sécuriser, et garder la main
 sur ce que font les agents.
 
-Rafael — étudiant en BUT GEII et développeur freelance à Lyon · [rgm-dev.site](https://rgm-dev.site) · [portfolio](https://www.rafaelgmille.site) · [la page qui présente cette stack](https://www.rafaelgmille.site/stack)
+Étudiant en BUT GEII et développeur freelance à Lyon · [rgm-dev.site](https://rgm-dev.site) · [portfolio](https://www.rafaelgmille.site) · [la page qui présente cette stack](https://www.rafaelgmille.site/stack)
 
 **Installer une skill en deux minutes :** voir [Installer](#installer) plus bas, ou le
 [tuto illustré pour Claude Code, Codex, l'application Claude et les autres agents](https://www.rafaelgmille.site/stack#installer).
@@ -26,7 +26,7 @@ Trois principes reviennent partout :
 - **Aucun secret dans la conversation.** Les clés se posent par un script à
   saisie masquée qui teste la clé avant de l'écrire (`poser-secret`).
 - **L'humain décide de ce qui sort.** Envoi à un client, dépense, suppression :
-  l'agent prépare, Rafael valide.
+  l'agent prépare, l'humain valide.
 
 ## Les skills
 
