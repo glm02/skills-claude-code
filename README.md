@@ -116,7 +116,24 @@ Elles ne sont pas dans ce dépôt : elles appartiennent à leurs auteurs.
 
 ## Installer
 
-Copier un dossier de `skills/` dans `~/.claude/skills/`. Les scripts lisent
+```bash
+git clone https://github.com/glm02/skills-claude-code.git
+cp -r skills-claude-code/skills/site-a-z ~/.claude/skills/   # une skill
+cp -r skills-claude-code/skills/* ~/.claude/skills/          # toutes
+```
+
+| Agent | Dossier |
+|---|---|
+| Claude Code | `~/.claude/skills/` |
+| Codex | `~/.codex/skills/` |
+| Hermes Agent | `~/.hermes/skills/<catégorie>/` |
+| Autre agent | son dossier de skills, ou le contenu de `SKILL.md` dans ses instructions (`AGENTS.md`) |
+
+Relancer l'agent : la skill se charge quand la tâche correspond, ou par son
+nom (`/site-a-z` dans Claude Code). Sous Windows, `~` est `%USERPROFILE%`.
+Tuto illustré : [rgm-dev.site/stack#installer](https://rgm-dev.site/stack#installer).
+
+Les scripts lisent
 leurs clés dans `~/.secrets/` ou dans l'environnement : aucune n'est dans ce
 dépôt. Les chemins (`~/Documents/GitHub/...`) sont ceux de mon poste, à
 adapter.
