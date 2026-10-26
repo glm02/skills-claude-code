@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="fr" data-resolution="portrait">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/react@18.3.1/umd/react.production.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/react-dom@18.3.1/umd/react-dom.production.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/htm@3.1.1/dist/htm.umd.js"></script>
+    <script src="assets/logos.js"></script>
+    <script src="assets/composants.js"></script>
+    <script src="assets/audio-rms.js"></script>
+    <link rel="stylesheet" href="assets/composants.css" />
+    <style>
+      @font-face { font-family: "Geist"; src: url("assets/geist.woff2") format("woff2"); font-weight: 100 900; font-display: block; }
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { width: 1080px; height: 1920px; overflow: hidden; background: #fff; }
+      #root {
+        position: relative; width: 1080px; height: 1920px; overflow: hidden; background: #fff; color: var(--encre);
+        font-family: "Geist", ui-sans-serif, system-ui, sans-serif; letter-spacing: -0.02em;
+      }
+      .clip { position: absolute; inset: 0; }
+      #fond { background: radial-gradient(rgba(40,133,245,0.26) 2.2px, transparent 2.6px) 0 0 / 34px 34px, #fff; }
+      #halo {
+        position: absolute; left: 50%; top: 250px; width: 1400px; height: 1400px; margin-left: -700px; border-radius: 50%; filter: blur(90px);
+        background: conic-gradient(from var(--rot, 0deg), rgba(40,133,245,0), rgba(40,133,245,0.3), rgba(0,102,221,0.05), rgba(40,133,245,0.26), rgba(40,133,245,0));
+      }
+      #voile { position: absolute; inset: 0; background: radial-gradient(circle at 50% 42%, rgba(255,255,255,0.88) 0%, rgba(255,255,255,0.55) 45%, rgba(255,255,255,0) 75%); }
+      /* Texte dans la bande lisible TikTok : 168 → 1330 px. */
+      .haut { position: absolute; top: 190px; left: 0; right: 0; text-align: center; padding: 0 70px; }
+      .centre { position: absolute; left: 0; right: 0; top: 168px; bottom: 590px; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 0 70px; }
+      .eyebrow { font-size: 30px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--bleu); }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="20" data-width="1080" data-height="1920">
+      <div id="fond" class="clip" data-start="0" data-duration="20" data-track-index="0" data-track-kind="graphics">
+        <div id="halo"></div><div id="voile"></div>
+      </div>
+
+      <!-- Une scène = un clip. Le contenu React est monté dans les hôtes vides. -->
+      <div id="s1" class="clip" data-start="0" data-duration="4" data-track-index="1" data-track-kind="graphics">
+        <div class="centre"><div id="titre1-hote"></div></div>
+      </div>
+
+      <!-- Sous-titres de la voix off (facultatif) -->
+      <div id="st" class="clip" data-start="0" data-duration="20" data-track-index="2" data-track-kind="captions"><div id="st-hote"></div></div>
+
+      <audio id="musique" class="clip" data-start="0" data-duration="20" data-track-index="10" data-volume="0.3" data-fade-out="1.2" src="assets/music/musique.mp3"></audio>
+      <!-- <audio id="voix" class="clip" data-start="0.3" data-track-index="9" data-volume="1" src="assets/voix/voix.mp3"></audio> -->
+    </div>
+
+    <script>
+      window.__timelines = window.__timelines || {};
+      const { html, monter, anim } = RGM;
+
+      monter("titre1-hote", html`<${RGM.Titre} id="titre1" texte=${"Votre titre\n*en bleu*."} taille=${110} />`);
+
+      document.fonts.ready.then(() => {
+        const tl = gsap.timeline({ paused: true });
+        const halo = document.getElementById("halo");
+        anim.audioReactif(tl, 20, (t, e) => {
+          halo.style.setProperty("--rot", t * 14 + "deg");
+          halo.style.opacity = (0.55 + e * 0.45).toFixed(3);
+        });
+
+        anim.mots(tl, "#titre1", 0.2);
+
+        window.__timelines["main"] = tl;
+        tl.seek(0);
+      });
+    </script>
+  </body>
+</html>

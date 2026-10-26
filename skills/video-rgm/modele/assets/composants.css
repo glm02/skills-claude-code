@@ -1,0 +1,145 @@
+/* Styles des composants React RGM (assets/composants.js).
+   Charte : fond blanc, bleu unique accent, texte noir. Les vrais logos gardent
+   leurs couleurs de marque, posés sur des tuiles blanches. */
+
+:root {
+  --encre: #0d1116;
+  --bleu: #0066dd;
+  --bleu-vif: #2885f5;
+  --bleu-pale: #e2efff;
+  --bleu-tres-pale: #f3f8ff;
+  --bord: #dfe4eb;
+  --nuit: #0b1220;
+}
+
+/* Logos */
+.rgm-logo {
+  position: relative; display: flex; align-items: center; justify-content: center; flex: none;
+  background: #fff; border: 2px solid var(--bord);
+  box-shadow: 0 18px 40px -22px rgba(7,32,77,0.45);
+}
+.rgm-logo img, .rgm-logo svg { display: block; }
+.rgm-logo-etiquette { position: absolute; top: 100%; margin-top: 12px; font-size: 24px; font-weight: 600; white-space: nowrap; }
+.rgm-logo-rgm { display: block; box-shadow: 0 30px 70px -24px rgba(27,23,255,0.55); }
+
+/* Orbite */
+.rgm-orbite { position: absolute; left: 50%; top: 50%; width: 0; height: 0; }
+.rgm-orbite-anneau { position: absolute; left: 0; top: 0; border-radius: 50%; border: 2px dashed rgba(40,133,245,0.45); }
+.rgm-orbite-item { position: absolute; left: -60px; top: -60px; }
+.rgm-orbite-centre { position: absolute; left: 0; top: 0; transform: translate(-50%, -50%); }
+
+/* Bandeau */
+.rgm-bande { position: absolute; left: 0; right: 0; overflow: hidden; height: 150px; }
+.rgm-bande-piste { display: flex; gap: 28px; padding: 10px 0; width: max-content; }
+
+/* Flux */
+.rgm-flux { position: relative; }
+.rgm-flux-svg { position: absolute; inset: 0; overflow: visible; }
+.rgm-flux-fond { fill: none; stroke: var(--bord); stroke-width: 6; stroke-linecap: round; }
+.rgm-flux-lien { fill: none; stroke: var(--bleu-vif); stroke-width: 6; stroke-linecap: round; }
+.rgm-flux-paquet { fill: var(--bleu); stroke: #fff; stroke-width: 4; }
+.rgm-flux-noeud { position: absolute; width: 120px; display: flex; flex-direction: column; align-items: center; }
+.rgm-flux-label { margin-top: 14px; font-size: 26px; font-weight: 650; white-space: nowrap; letter-spacing: -0.02em; }
+.rgm-flux-agent { position: absolute; width: 200px; display: flex; flex-direction: column; align-items: center; }
+.rgm-flux-agent img { position: relative; width: 200px; height: 200px; border-radius: 48px; box-shadow: 0 40px 90px -24px rgba(27,23,255,0.6); }
+.rgm-flux-halo { position: absolute; left: -60px; top: -60px; width: 320px; height: 320px; border-radius: 50%; background: radial-gradient(closest-side, rgba(40,133,245,0.35), rgba(40,133,245,0)); }
+
+/* Téléphone */
+.rgm-tel {
+  position: relative; width: 760px; height: 1090px; border-radius: 64px; background: #fff;
+  border: 2px solid var(--bord); overflow: hidden;
+  box-shadow: 0 60px 140px -50px rgba(7,32,77,0.4), 0 10px 30px rgba(7,32,77,0.08);
+}
+.rgm-tel-statut { height: 70px; display: flex; align-items: center; justify-content: space-between; padding: 0 54px; font-size: 26px; font-weight: 600; }
+.rgm-tel-ilot { width: 170px; height: 40px; border-radius: 999px; background: var(--encre); display: block; }
+.rgm-tel-entete { height: 120px; display: flex; align-items: center; gap: 22px; padding: 0 36px; border-bottom: 2px solid var(--bord); background: var(--bleu-tres-pale); }
+.rgm-tel-avatar { width: 76px; height: 76px; border-radius: 22px; }
+.rgm-tel-nom { font-size: 34px; font-weight: 650; }
+.rgm-tel-etat { font-size: 24px; font-weight: 500; display: flex; align-items: center; gap: 10px; margin-top: 4px; }
+.rgm-tel-etat i { width: 12px; height: 12px; border-radius: 50%; background: #18b26b; display: block; }
+.rgm-tel-fil { padding: 34px 32px; display: flex; flex-direction: column; gap: 22px; }
+.rgm-msg { position: relative; display: flex; }
+.rgm-msg.rgm-client { justify-content: flex-end; }
+.rgm-bulle { max-width: 600px; padding: 24px 30px; border-radius: 36px; font-size: 36px; font-weight: 500; line-height: 1.28; letter-spacing: -0.01em; }
+.rgm-client .rgm-bulle { background: var(--bleu); color: #fff; border-bottom-right-radius: 10px; }
+.rgm-agent .rgm-bulle { background: #eef1f5; border-bottom-left-radius: 10px; }
+.rgm-agent .rgm-bulle b { color: var(--bleu); font-weight: 650; }
+.rgm-frappe { position: absolute; left: 0; top: 0; height: 74px; width: 128px; border-radius: 34px; border-bottom-left-radius: 10px; background: #eef1f5; display: flex; align-items: center; justify-content: center; gap: 12px; }
+.rgm-frappe i { width: 14px; height: 14px; border-radius: 50%; background: #5d6878; display: block; }
+
+/* Notification */
+.rgm-notif {
+  position: absolute; width: 900px; height: 170px; display: flex; align-items: center; gap: 28px; padding: 0 34px;
+  border-radius: 40px; background: rgba(255,255,255,0.97); border: 2px solid var(--bord);
+  box-shadow: 0 30px 70px -36px rgba(7,32,77,0.45);
+}
+.rgm-notif-rgm { width: 88px; height: 88px; border-radius: 24px; flex: none; }
+.rgm-notif-corps { flex: 1; min-width: 0; }
+.rgm-notif-l1 { display: flex; justify-content: space-between; font-size: 22px; font-weight: 600; letter-spacing: 0.02em; text-transform: uppercase; }
+.rgm-notif-quand { text-transform: none; letter-spacing: 0; font-weight: 500; }
+.rgm-notif-titre { font-size: 34px; font-weight: 650; letter-spacing: -0.03em; margin-top: 4px; }
+.rgm-notif-texte { font-size: 27px; font-weight: 500; margin-top: 2px; letter-spacing: -0.01em; }
+
+/* Éditeur et terminal */
+.rgm-editeur, .rgm-terminal { position: relative; height: 100%; border-radius: 36px; background: var(--nuit); overflow: hidden; }
+.rgm-editeur-barre { height: 72px; display: flex; align-items: center; gap: 12px; padding: 0 30px; border-bottom: 2px solid #1b2537; }
+.rgm-editeur-barre i { width: 16px; height: 16px; border-radius: 50%; background: #2a3550; display: block; }
+.rgm-editeur-barre span { margin-left: 22px; font-family: "JetBrains Mono", monospace; font-size: 24px; color: #c9d6ea; letter-spacing: 0; }
+.rgm-code { position: relative; padding: 40px; font-family: "JetBrains Mono", monospace; font-size: 34px; font-weight: 500; line-height: 1.6; letter-spacing: 0; color: #e8eef7; white-space: pre; }
+.rgm-ch { opacity: 0; }
+.rgm-t-kw { color: #7db4ff; } .rgm-t-fn { color: #fff; font-weight: 700; } .rgm-t-str { color: #9fd0ff; }
+.rgm-t-prop { color: #c3d8f5; } .rgm-t-punc { color: #8ea3c2; }
+.rgm-curseur { position: absolute; left: 0; top: 0; width: 4px; height: 44px; background: var(--bleu-vif); border-radius: 2px; }
+.rgm-terminal-corps { padding: 36px 40px; font-family: "JetBrains Mono", monospace; font-size: 30px; line-height: 1.7; color: #e8eef7; letter-spacing: 0; }
+.rgm-ligne.rgm-ok { color: #7db4ff; font-weight: 700; }
+
+/* Faisceau (border-beam) */
+.rgm-faisceau { position: relative; border-radius: 40px; padding: 4px; overflow: hidden; background: var(--bord); box-shadow: 0 70px 140px -55px rgba(7,32,77,0.5); }
+.rgm-faisceau::before {
+  content: ""; position: absolute; left: 50%; top: 50%; width: 1800px; height: 1800px; margin: -900px 0 0 -900px;
+  background: conic-gradient(from var(--angle, 0deg), transparent 0deg, transparent 250deg, var(--bleu-vif) 310deg, #fff 335deg, var(--bleu-vif) 350deg, transparent 360deg);
+}
+.rgm-faisceau-int { position: relative; height: 100%; border-radius: 36px; background: #fff; overflow: hidden; }
+.rgm-faisceau-int.rgm-sombre { background: var(--nuit); }
+
+/* Offre */
+.rgm-offre { padding: 50px 54px; }
+.rgm-badge { display: inline-flex; padding: 12px 26px; border-radius: 999px; background: var(--bleu-tres-pale); border: 2px solid var(--bleu-pale); color: var(--bleu); font-size: 30px; font-weight: 650; }
+.rgm-prix { font-size: 104px; font-weight: 700; letter-spacing: -0.055em; color: var(--bleu); margin-top: 34px; line-height: 1; font-variant-numeric: tabular-nums; }
+.rgm-delai { font-size: 34px; font-weight: 550; margin-top: 18px; }
+.rgm-offre hr { border: 0; height: 2px; background: var(--bord); margin: 38px 0 30px; }
+.rgm-offre li { list-style: none; display: flex; align-items: center; gap: 22px; font-size: 34px; font-weight: 550; letter-spacing: -0.02em; height: 74px; }
+.rgm-ok { width: 46px; height: 46px; border-radius: 50%; background: var(--bleu-vif); flex: none; display: flex; align-items: center; justify-content: center; }
+
+/* Compteur */
+.rgm-compteur { text-align: center; }
+.rgm-compteur-val { font-size: 280px; font-weight: 700; letter-spacing: -0.06em; color: var(--bleu); line-height: 1; font-variant-numeric: tabular-nums; }
+.rgm-compteur-val small { font-size: 130px; letter-spacing: -0.03em; }
+.rgm-compteur-legende { font-size: 56px; font-weight: 650; margin-top: 24px; letter-spacing: -0.035em; }
+
+/* Tâches */
+.rgm-taches { display: flex; flex-direction: column; gap: 18px; }
+.rgm-tache { position: relative; display: flex; align-items: center; gap: 24px; height: 130px; padding: 0 32px; border-radius: 30px; background: #fff; border: 2px solid var(--bord); box-shadow: 0 24px 60px -34px rgba(7,32,77,0.35); }
+.rgm-case { position: relative; width: 60px; height: 60px; border-radius: 50%; border: 3px solid var(--bord); flex: none; }
+.rgm-coche { position: absolute; inset: -3px; border-radius: 50%; background: var(--bleu-vif); display: flex; align-items: center; justify-content: center; }
+.rgm-tache-lib { position: relative; font-size: 38px; font-weight: 600; letter-spacing: -0.03em; }
+.rgm-rature { position: absolute; left: -4px; right: -4px; top: 52%; height: 4px; border-radius: 2px; background: var(--encre); transform-origin: left center; display: block; }
+.rgm-tache-duree { margin-left: auto; font-size: 36px; font-weight: 650; color: var(--bleu); }
+
+/* Texte */
+.rgm-titre { font-weight: 650; line-height: 1.02; letter-spacing: -0.05em; text-align: center; }
+.rgm-titre-ligne { display: block; }
+.rgm-mot { display: inline-block; }
+.rgm-bleu { color: var(--bleu); }
+
+/* Sous-titres : en bas de la bande lisible TikTok */
+.rgm-st { position: absolute; left: 70px; right: 70px; top: 1150px; height: 170px; }
+.rgm-st-groupe { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; flex-wrap: wrap; text-align: center; font-size: 56px; font-weight: 700; letter-spacing: -0.03em; line-height: 1.15; opacity: 0; }
+/* En flex, l'espace en fin de <span> est avalé : l'écart entre mots vient du gap. */
+.rgm-st-groupe { column-gap: 0.26em; text-shadow: 0 0 24px #fff, 0 0 12px #fff; }
+
+/* Bouton et toast */
+.rgm-bouton { display: inline-flex; align-items: center; gap: 22px; padding: 34px 60px; border-radius: 999px; background: var(--bleu); color: #fff; font-size: 48px; font-weight: 650; letter-spacing: -0.02em; box-shadow: 0 30px 70px -20px rgba(0,102,221,0.6); }
+.rgm-toast { display: inline-flex; align-items: center; gap: 20px; padding: 18px 34px 18px 22px; border-radius: 999px; background: #fff; border: 2px solid var(--bleu-pale); font-size: 36px; font-weight: 650; box-shadow: 0 24px 60px -24px rgba(0,102,221,0.5); }
+.rgm-toast-point { position: relative; width: 22px; height: 22px; margin-left: 10px; }
+.rgm-toast-point i { position: absolute; inset: 0; border-radius: 50%; background: var(--bleu-vif); display: block; }

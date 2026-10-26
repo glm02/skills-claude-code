@@ -1,0 +1,154 @@
+{
+ "gmail": {
+  "titre": "Gmail",
+  "couleur": "#EA4335"
+ },
+ "whatsapp": {
+  "titre": "WhatsApp",
+  "couleur": "#25D366"
+ },
+ "telegram": {
+  "titre": "Telegram",
+  "couleur": "#26A5E4"
+ },
+ "googlecalendar": {
+  "titre": "Google Calendar",
+  "couleur": "#4285F4"
+ },
+ "n8n": {
+  "titre": "n8n",
+  "couleur": "#EA4B71"
+ },
+ "notion": {
+  "titre": "Notion",
+  "couleur": "#000000"
+ },
+ "slack": {
+  "titre": "Slack",
+  "couleur": "#4A154B"
+ },
+ "googlesheets": {
+  "titre": "Google Sheets",
+  "couleur": "#34A853"
+ },
+ "openai": {
+  "titre": "OpenAI",
+  "couleur": "#412991"
+ },
+ "anthropic": {
+  "titre": "Anthropic",
+  "couleur": "#191919"
+ },
+ "claude": {
+  "titre": "Claude",
+  "couleur": "#D97757"
+ },
+ "stripe": {
+  "titre": "Stripe",
+  "couleur": "#635BFF"
+ },
+ "hubspot": {
+  "titre": "HubSpot",
+  "couleur": "#FF7A59"
+ },
+ "supabase": {
+  "titre": "Supabase",
+  "couleur": "#3FCF8E"
+ },
+ "vercel": {
+  "titre": "Vercel",
+  "couleur": "#000000"
+ },
+ "nextdotjs": {
+  "titre": "Next.js",
+  "couleur": "#000000"
+ },
+ "react": {
+  "titre": "React",
+  "couleur": "#61DAFB"
+ },
+ "airtable": {
+  "titre": "Airtable",
+  "couleur": "#18BFFF"
+ },
+ "zapier": {
+  "titre": "Zapier",
+  "couleur": "#FF4F00"
+ },
+ "make": {
+  "titre": "Make",
+  "couleur": "#6D00CC"
+ },
+ "shopify": {
+  "titre": "Shopify",
+  "couleur": "#7AB55C"
+ },
+ "googledrive": {
+  "titre": "Google Drive",
+  "couleur": "#4285F4"
+ },
+ "discord": {
+  "titre": "Discord",
+  "couleur": "#5865F2"
+ },
+ "trello": {
+  "titre": "Trello",
+  "couleur": "#0052CC"
+ },
+ "calendly": {
+  "titre": "Calendly",
+  "couleur": "#006BFF"
+ },
+ "quickbooks": {
+  "titre": "QuickBooks",
+  "couleur": "#2CA01C"
+ },
+ "google": {
+  "titre": "Google",
+  "couleur": "#4285F4"
+ },
+ "wordpress": {
+  "titre": "WordPress",
+  "couleur": "#21759B"
+ },
+ "woocommerce": {
+  "titre": "WooCommerce",
+  "couleur": "#96588A"
+ },
+ "instagram": {
+  "titre": "Instagram",
+  "couleur": "#FF0069"
+ },
+ "facebook": {
+  "titre": "Facebook",
+  "couleur": "#0866FF"
+ },
+ "tiktok": {
+  "titre": "TikTok",
+  "couleur": "#000000"
+ },
+ "youtube": {
+  "titre": "YouTube",
+  "couleur": "#FF0000"
+ },
+ "mailchimp": {
+  "titre": "MailChimp",
+  "couleur": "#FFE01B"
+ },
+ "brevo": {
+  "titre": "Brevo",
+  "couleur": "#0B996E"
+ },
+ "odoo": {
+  "titre": "Odoo",
+  "couleur": "#714B67"
+ },
+ "zoho": {
+  "titre": "Zoho",
+  "couleur": "#E42527"
+ },
+ "googlemeet": {
+  "titre": "Google Meet",
+  "couleur": "#00897B"
+ }
+}
