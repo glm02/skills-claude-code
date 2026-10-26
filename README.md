@@ -4,7 +4,10 @@ Les 40 skills que j'ai écrites pour travailler avec des agents IA au quotidien 
 livrer des sites, brancher des automatisations, sécuriser, et garder la main
 sur ce que font les agents.
 
-Rafael — développeur full-stack freelance à Lyon · [rgm-dev.site](https://rgm-dev.site) · [la page qui présente cette stack](https://rgm-dev.site/stack)
+Rafael — étudiant en BUT GEII et développeur freelance à Lyon · [rgm-dev.site](https://rgm-dev.site) · [portfolio](https://www.rafaelgmille.site) · [la page qui présente cette stack](https://www.rafaelgmille.site/stack)
+
+**Installer une skill en deux minutes :** voir [Installer](#installer) plus bas, ou le
+[tuto illustré pour Claude Code, Codex, l'application Claude et les autres agents](https://www.rafaelgmille.site/stack#installer).
 
 ## Pourquoi des skills
 
@@ -125,13 +128,15 @@ cp -r skills-claude-code/skills/* ~/.claude/skills/          # toutes
 | Agent | Dossier |
 |---|---|
 | Claude Code | `~/.claude/skills/` |
-| Codex | `~/.codex/skills/` |
+| Codex | `~/.agents/skills/` (ou `.agents/skills/` à la racine d'un dépôt) |
+| Application Claude (claude.ai) | dossier de la skill compressé en zip, importé dans les paramètres, rubrique Skills |
 | Hermes Agent | `~/.hermes/skills/<catégorie>/` |
 | Autre agent | son dossier de skills, ou le contenu de `SKILL.md` dans ses instructions (`AGENTS.md`) |
 
 Relancer l'agent : la skill se charge quand la tâche correspond, ou par son
 nom (`/site-a-z` dans Claude Code). Sous Windows, `~` est `%USERPROFILE%`.
-Tuto illustré : [rgm-dev.site/stack#installer](https://rgm-dev.site/stack#installer).
+Tuto illustré : [rafaelgmille.site/stack#installer](https://www.rafaelgmille.site/stack#installer)
+(aussi sur [rgm-dev.site/stack#installer](https://rgm-dev.site/stack#installer)).
 
 Les scripts lisent
 leurs clés dans `~/.secrets/` ou dans l'environnement : aucune n'est dans ce
