@@ -1,6 +1,6 @@
 # Skills Claude Code — RGM Dev
 
-Les 39 skills que j'ai écrites pour travailler avec des agents IA au quotidien :
+Les 40 skills que j'ai écrites pour travailler avec des agents IA au quotidien :
 livrer des sites, brancher des automatisations, sécuriser, et garder la main
 sur ce que font les agents.
 
@@ -50,6 +50,7 @@ Trois principes reviennent partout :
 | [`nettoyer-projet`](skills/nettoyer-projet) | Fichiers, dépendances et composants inutilisés |
 | [`portfolio-projet`](skills/portfolio-projet) | Ajouter un projet au portfolio |
 | [`photos-web`](skills/photos-web) | Retirer le GPS des photos, redimensionner, WebP |
+| [`ui-rgm`](skills/ui-rgm) | Reproduire l'interface de rgm-dev.site : Appica UI, fond animé, verre dépoli et liquide |
 
 ### Sécurité
 | Skill | Rôle |
@@ -93,6 +94,25 @@ Trois principes reviennent partout :
 |---|---|
 | [`depannage-pc`](skills/depannage-pc) | Diagnostiquer un problème Windows |
 | [`menage-disque`](skills/menage-disque) | Libérer de la place sans rien casser |
+
+## Les skills des autres que j'utilise
+
+Elles ne sont pas dans ce dépôt : elles appartiennent à leurs auteurs.
+
+| Collection | Auteur | Pour quoi |
+|---|---|---|
+| HyperFrames (`hyperframes`, `hyperframes-cli`, `hyperframes-registry`, `media-use`) | HeyGen | Vidéos écrites en HTML, rendues en MP4 |
+| [brag](https://github.com/latent-spaces/brag) | Latent Spaces | Vidéo de lancement tirée du code d'un projet |
+| [Taste Skill](https://github.com/Leonxlnx/taste-skill) | Leonxlnx | Directions de design, refontes, chartes |
+| [Skills de Matt Pocock](https://github.com/mattpocock/skills) | Matt Pocock | Tests d'abord, diagnostic, revue, modélisation |
+| [n8n skills](https://github.com/czlonkowski/n8n-skills) | Romuald Członkowski | Workflows n8n sans erreur d'expression ni de nœud |
+| [Design engineering](https://github.com/emilkowalski/skills) | Emil Kowalski | Le détail des animations et des composants |
+| [Better UI](https://github.com/jakubkrehel/skills) | Jakub Krehel | Rayons, alignement optique, profondeur |
+| [Plugins officiels](https://github.com/anthropics/claude-plugins-official) | Anthropic | Sécurité, design, création de skills, documents |
+| Figma (`figma-use`, `figma-design-to-code`…) | Figma | De la maquette au code |
+| `transitions-dev`, `transitions-polish`, `design-motion-principles`, `motion-design` | transitions.dev et la communauté | Durées, courbes, audit des animations |
+| `stripe-projects` | Stripe | Provisionner des services depuis le terminal |
+| `bklit-ui` | Bklit | Graphiques des tableaux de bord |
 
 ## Installer
 
